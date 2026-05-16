@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TMkDvnt/TGY=",
+  "dgSpecHash": "OeUcbaIsz0w=",
   "success": true,
-  "projectFilePath": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj",
+  "projectFilePath": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\Impresos_Multiples_Reto\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Roberto\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.6\\microsoft.aspnetcore.openapi.10.0.6.nupkg.sha512",
     "C:\\Users\\Roberto\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",

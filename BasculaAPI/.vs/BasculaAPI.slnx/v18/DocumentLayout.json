@@ -1,41 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\BasculaAPI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{345D537A-59BF-47FA-9AA8-5E8274D54BBB}|BasculaAPI\\BasculaAPI.csproj|d:\\users\\roberto\\desktop\\escritorio 2026\\reto\\basculaapi\\basculaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{345D537A-59BF-47FA-9AA8-5E8274D54BBB}|BasculaAPI\\BasculaAPI.csproj|solutionrelative:basculaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\Impresos_Multiples_Reto\\BasculaAPI\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\BasculaAPI\\BasculaAPI\\Program.cs",
-              "RelativeDocumentMoniker": "BasculaAPI\\Program.cs",
-              "ToolTip": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\BasculaAPI\\BasculaAPI\\Program.cs",
-              "RelativeToolTip": "BasculaAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T04:08:24.185Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

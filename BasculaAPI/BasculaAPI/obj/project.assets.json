@@ -1796,11 +1796,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj",
+      "projectUniqueName": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\Impresos_Multiples_Reto\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj",
       "projectName": "BasculaAPI",
-      "projectPath": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj",
+      "projectPath": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\Impresos_Multiples_Reto\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj",
       "packagesPath": "C:\\Users\\Roberto\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\BasculaAPI\\BasculaAPI\\obj\\",
+      "outputPath": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\Impresos_Multiples_Reto\\BasculaAPI\\BasculaAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
