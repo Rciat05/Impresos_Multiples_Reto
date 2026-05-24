@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\Impresos_Multiples_Reto\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj": {}
+    "C:\\Users\\miche\\Desktop\\RetoFinal2026\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj": {}
   },
   "projects": {
-    "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\Impresos_Multiples_Reto\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj": {
+    "C:\\Users\\miche\\Desktop\\RetoFinal2026\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\Impresos_Multiples_Reto\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj",
+        "projectUniqueName": "C:\\Users\\miche\\Desktop\\RetoFinal2026\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj",
         "projectName": "BasculaAPI",
-        "projectPath": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\Impresos_Multiples_Reto\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj",
-        "packagesPath": "C:\\Users\\Roberto\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\Roberto\\Desktop\\Escritorio 2026\\Reto\\Impresos_Multiples_Reto\\BasculaAPI\\BasculaAPI\\obj\\",
+        "projectPath": "C:\\Users\\miche\\Desktop\\RetoFinal2026\\BasculaAPI\\BasculaAPI\\BasculaAPI.csproj",
+        "packagesPath": "C:\\Users\\miche\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\miche\\Desktop\\RetoFinal2026\\BasculaAPI\\BasculaAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Roberto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\miche\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
@@ -55,6 +55,26 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.8, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[10.1.7, )"
             },
             "System.IO.Ports": {
               "target": "Package",
@@ -80,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300-preview.0.26177.108/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

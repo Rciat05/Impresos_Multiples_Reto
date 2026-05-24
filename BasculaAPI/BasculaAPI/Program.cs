@@ -1,72 +1,52 @@
-// Servicio Background: Corre permanentemente leyendo el puerto COM
-public class LectorBasculaService : BackgroundService
+using Microsoft.EntityFrameworkCore;
+using BasculaAPI.Models;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// ==========================================
+// 1. REGISTRO DE SERVICIOS (DbContext)
+// ==========================================
+
+// Aquí registramos tu conexión a SQL Server usando el appsettings.json
+builder.Services.AddDbContext<SistemaBasculaDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaBascula")));
+
+// Soporte para los Controladores del API y Swagger
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// ==========================================
+// SERVICIO BACKGROUND EN PAUSA (Tu compañero)
+// ==========================================
+/*
+public class LectorBasculaService : Microsoft.Extensions.Hosting.BackgroundService
 {
-    private readonly RegistroPeso _registro;
-    private readonly ILogger<LectorBasculaService> _logger;
-
-    // CONFIGURACIÓN CLAVE: con PuTTY
-    private readonly string _puertoCom = "COM3";
-    private readonly bool _esModoSICS = false; // Ponlo en 'true' si necesitas enviarle la letra "S"
-
-    public LectorBasculaService(RegistroPeso registro, ILogger<LectorBasculaService> logger)
+    protected override async System.Threading.Tasks.Task ExecuteAsync(System.Threading.CancellationToken stoppingToken)
     {
-        _registro = registro;
-        _logger = logger;
-    }
-
-    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-    {
-        while (!stoppingToken.IsCancellationRequested)
-        {
-            try
-            {
-                using var serialPort = new SerialPort(_puertoCom, 9600, Parity.None, 8, StopBits.One);
-
-                // Tiempos de espera para que no se quede congelado
-                serialPort.ReadTimeout = 1000;
-                serialPort.WriteTimeout = 500;
-
-                serialPort.Open();
-                _logger.LogInformation($"[OK] Báscula conectada en el puerto {_puertoCom}");
-
-                while (serialPort.IsOpen && !stoppingToken.IsCancellationRequested)
-                {
-                    // Si la Mettler Toledo está en modo SICS, debemos pedirle el dato
-                    if (_esModoSICS)
-                    {
-                        serialPort.WriteLine("S"); // Comando estándar de Mettler Toledo
-                        await Task.Delay(200, stoppingToken); // Darle tiempo de responder
-                    }
-
-                    if (serialPort.BytesToRead > 0)
-                    {
-                        string datoCrudo = serialPort.ReadLine();
-
-                        // Limpieza: Buscar solo el número dentro de todo lo que envíe la báscula
-                        // Ej. Convierte "S S   15.50 kg" en "15.50"
-                        Match match = Regex.Match(datoCrudo, @"[-+]?[0-9]*\.?[0-9]+");
-
-                        if (match.Success)
-                        {
-                            _registro.UltimoPeso = match.Value;
-                        }
-                    }
-
-                    // Pausa ligera para no consumir toda la CPU
-                    await Task.Delay(100, stoppingToken);
-                }
-            }
-            catch (UnauthorizedAccessException)
-            {
-                _logger.LogWarning($"El puerto {_puertoCom} está ocupado por otro programa (¿Tienes PuTTY abierto?). Reintentando...");
-            }
-            catch (Exception)
-            {
-                _logger.LogWarning($"Esperando conexión con la báscula en {_puertoCom}... (Revisar cable)");
-            }
-
-            // Si falla o se desconecta, espera 3 segundos y vuelve a intentar el ciclo completo
-            await Task.Delay(3000, stoppingToken);
-        }
+        await System.Threading.Tasks.Task.Delay(1000, stoppingToken);
     }
 }
+*/
+
+var app = builder.Build();
+
+// ==========================================
+// 2. CONFIGURACIÓN DEL PIPELINE HTTP (Middleware)
+// ==========================================
+
+// Activar Swagger para que puedas hacer pruebas visuales
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseAuthorization();
+
+// Mapear los controladores automáticamente (así encuentra tu PesosController)
+app.MapControllers();
+
+System.Console.WriteLine("¡Servidor del Backend Iniciando con SQL Server!");
+
+app.Run();
