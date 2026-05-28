@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,11 +30,9 @@ public partial class SistemaBasculaDbContext : DbContext
             entity.Property(e => e.FechaRegistro)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
-            entity.Property(e => e.NombreProducto)
-                .HasMaxLength(100)
-                .IsUnicode(false);
-            entity.Property(e => e.Peso).HasColumnType("decimal(10, 2)");
-            entity.Property(e => e.Unidad)
+            entity.Property(e => e.PesoKg).HasColumnType("decimal(10, 3)");
+            entity.Property(e => e.PesoLb).HasColumnType("decimal(10, 3)");
+            entity.Property(e => e.UnidadOrigen)
                 .HasMaxLength(5)
                 .IsUnicode(false);
         });
