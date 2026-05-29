@@ -62,13 +62,12 @@ const ReportsDashboard: React.FC<ReportsDashboardProps> = ({ refreshTrigger }) =
     
     autoTable(doc, {
       startY: 35,
-      head: [['ID', 'Fecha y Hora', 'Kilos (KG)', 'Libras (LB)', 'Origen']],
+      head: [['ID', 'Fecha y Hora', 'Kilos (KG)', 'Libras (LB)']],
       body: registros.map(r => [
         r.id.toString(), 
         new Date(r.fechaRegistro).toLocaleString(), 
         `${r.pesoKg} kg`, 
-        `${r.pesoLb} lb`,
-        r.unidadOrigen.toUpperCase()
+        `${r.pesoLb} lb`
       ]),
       headStyles: { fillColor: [0, 40, 85] } 
     });

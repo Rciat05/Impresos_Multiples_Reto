@@ -36,7 +36,7 @@ const ScaleSimulator: React.FC<ScaleSimulatorProps> = ({ onRegistroExitoso }) =>
   };
 
   return (
-    <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 relative overflow-hidden flex flex-col justify-between h-full">
+    <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 pb-36 relative overflow-hidden flex flex-col justify-between h-full">
       <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
         <Scale size={150} />
       </div>
@@ -73,10 +73,10 @@ const ScaleSimulator: React.FC<ScaleSimulatorProps> = ({ onRegistroExitoso }) =>
           className="w-full bg-[#002855] hover:bg-[#003d82] disabled:bg-gray-400 text-white py-5 rounded-2xl font-bold text-lg transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-3"
         >
           {cargando ? (
-            <span className="animate-pulse">Guardando en BD...</span>
+            <span className="animate-pulse">Guardando...</span>
           ) : (
             <>
-              <Database size={24} /> REGISTRAR PESO EN BD
+              <Database size={24} /> Registrar peso
             </>
           )}
         </button>

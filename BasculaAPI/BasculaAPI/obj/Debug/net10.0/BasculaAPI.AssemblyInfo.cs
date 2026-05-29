@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BasculaAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+701fad0a132c1bce633013199d022f8d88ecd7e4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c5c4cfaa3f9dc825e0176b73f9c410a6f50d965")]
 [assembly: System.Reflection.AssemblyProductAttribute("BasculaAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BasculaAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
